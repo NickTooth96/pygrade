@@ -1,0 +1,19 @@
+[HWs]
+percentage = 24
+current_score = 275
+possible_score = 300
+
+[Quizzes]
+percentage = 6
+current_score = 300
+possible_score = 400
+
+[Midterm]
+percentage = 30
+current_score = 73
+possible_score = 100
+
+[Final]
+percentage = 40
+current_score = 0
+possible_score = 0

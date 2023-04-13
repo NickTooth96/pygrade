@@ -1,0 +1,34 @@
+[Assignments]
+percentage = 20
+current_score = 95.3
+possible_score = 100
+
+[Demo1]
+percentage = 5
+current_score = 91.9
+possible_score = 100
+
+[Demo2]
+percentage = 10
+current_score = 86.6
+possible_score = 100
+
+[Demo3]
+percentage = 25
+current_score = 96.1
+possible_score = 100
+
+[Demo4]
+percentage = 25
+current_score = 0
+possible_score = 0
+
+["Readings&Quizzes"]
+percentage = 15
+current_score = 20
+possible_score = 25
+
+# ["uufhuahfuhaifiaysdguhuichuiwhgcuhqwdbdhgfvuiqhdichjhvsdychobdghvui"]
+# percentage = 0
+# current_score = 20
+# possible_score = 25
