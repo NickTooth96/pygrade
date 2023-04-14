@@ -3,5 +3,5 @@
 !config.toml
 !config_sample.toml
 
-# ignore ALL files in ANY directory named temp
-output/
+# ignore ALL files in ANY directory named output
+output/*
