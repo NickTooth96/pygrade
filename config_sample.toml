@@ -1,5 +1,5 @@
 # Sample of  config.toml formatting
-# DO NOT EDIT! Make changes in config.toml or creat new toml file
+# DO NOT EDIT! Make changes in config.toml or create new toml file
 # Nick Toothaker
 
 [catagory1]                 # name of catagory
