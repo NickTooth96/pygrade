@@ -20,11 +20,10 @@ class Course_Grade:
     def __init__(self, data):
         for element in data:
              self.course_grade_catagories[element] = data[element]
-
         attempted = 0
         for element in self.course_grade_catagories:
             grade = 0
-            self.course_grade_catagories[element]["catagory_name"] = element
+            self.course_grade_catagories[element]["catagory_name"] = element             
             if (self.course_grade_catagories[element]["possible_score"] == 0):
                 grade = 0
             else:
@@ -50,7 +49,7 @@ class Course_Grade:
         i = 0
         num = self.get_greatest_length()
         barrier = ""
-        while i < (num + 5): 
+        while i < (num + 6): 
             barrier += "-"
             i += 1
         num_as_str = str(num + 4)
@@ -60,13 +59,17 @@ class Course_Grade:
             if self.course_grade_catagories[element]["possible_score"] != 0:
                 out += self.course_grade_catagories[element]["catagory_name"] + format(": ",num_as_str) 
                 out = out[:num]
-                out += str(round(self.course_grade_catagories[element]["catagory_score"], 2)) + "%\n"
+                if len(str(round(self.course_grade_catagories[element]["catagory_score"], 2))) < 5 and str(round(self.course_grade_catagories[element]["catagory_score"], 2))[-1] == "0":
+                    out += str(round(self.course_grade_catagories[element]["catagory_score"], 2)) + "0%\n"
+                else:
+                    out += str(round(self.course_grade_catagories[element]["catagory_score"], 2)) + "%\n"
+
             else:
                 out += self.course_grade_catagories[element]["catagory_name"] + format(": ",num_as_str) 
                 out = out[:num]
                 out += "N/A\n"
             output += out
-        output += barrier + ("\nTotal"  + format(": ",num_as_str))[:num] + str(self.total_grade) + "%"
+        output += barrier + ("\nTotal"  + format(": ",num_as_str))[:num + 1] + str(self.total_grade) + "%"
         return output
 
     def generate_textfile(self):
@@ -166,7 +169,7 @@ except getopt.error as err:
 # print(cg.course_grade_catagories)
 # print(cg.total_grade)
 # print(cg.course_grade_catagories["HWs"]["catagory_score"])
-print()
-print(type(cg.get_greatest_length()))
-print(cg.get_greatest_length())
-print()
+# print()
+# print(type(cg.get_greatest_length()))
+# print(cg.get_greatest_length())
+# print()
