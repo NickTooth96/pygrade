@@ -16,10 +16,14 @@ class Course_Grade:
 
     course_grade_catagories = {}
     total_grade = 0
+    course_name = ""
 
     def __init__(self, data):
         for element in data:
-             self.course_grade_catagories[element] = data[element]
+            if element == "course_name":
+                self.course_name = data[element]
+            else: 
+                self.course_grade_catagories[element] = data[element]
         attempted = 0
         for element in self.course_grade_catagories:
             grade = 0
@@ -53,6 +57,7 @@ class Course_Grade:
             barrier += "-"
             i += 1
         num_as_str = str(num + 4)
+        output += self.course_name + "\n"
         output += barrier + "\n"
         for element in self.course_grade_catagories:
             out = ""

@@ -1,3 +1,5 @@
+course_name = "Example Course"
+
 [HWs]
 percentage = 24
 current_score = 275
