@@ -1,3 +1,3 @@
 # pygrade
 
-a small utility
+a very small utility
